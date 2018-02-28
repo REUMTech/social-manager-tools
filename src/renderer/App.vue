@@ -62,6 +62,9 @@
 </script>
 
 <style>
+  * {
+    box-sizing: border-box;
+  }
   /* Ensure layout covers the entire screen. */
   html, body {
     height: 100%;
