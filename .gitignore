@@ -9,5 +9,5 @@ npm-debug.log
 npm-debug.log.*
 thumbs.db
 !.gitkeep
-config.js
+config.json
 package-lock.json
