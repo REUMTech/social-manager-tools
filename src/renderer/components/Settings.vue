@@ -67,16 +67,19 @@
 <script>
 import {MDCSelect} from '@material/select'
 import {MDCTextField} from '@material/textfield'
-import fs from 'fs'
+const config = require('electron').remote.getGlobal('config')
 
 export default {
   mounted () {
-    this.readConfig()
-
-    MDCSelect.attachTo(this.$el.querySelector('.mdc-select'))
-    MDCTextField.attachTo(this.$el.querySelector('#username')).value = this.username
-    MDCTextField.attachTo(this.$el.querySelector('#password')).value = this.password
-    MDCTextField.attachTo(this.$el.querySelector('#tagsList'))
+    config.read().then((data) => {
+      this.username = data.username
+      this.password = atob(data.password)
+      this.hashtags = data.hashtags
+      MDCSelect.attachTo(this.$el.querySelector('.mdc-select'))
+      MDCTextField.attachTo(this.$el.querySelector('#username')).value = this.username
+      MDCTextField.attachTo(this.$el.querySelector('#password')).value = this.password
+      MDCTextField.attachTo(this.$el.querySelector('#tagsList'))
+    })
   },
   data: function () {
     return {
@@ -86,22 +89,13 @@ export default {
     }
   },
   methods: {
-    readConfig: function () {
-      if (!fs.existsSync('config.json')) {
-        return
-      }
-      const data = JSON.parse(fs.readFileSync('config.json', 'utf-8'))
-      this.username = data.username
-      this.password = atob(data.password)
-      this.hashtags = data.hashtags
-    },
     saveToConfig: function () {
       const data = {
         username: this.username,
-        password: btoa(this.password),
+        password: this.password,
         hashtags: this.hashtags
       }
-      fs.writeFileSync('config.json', JSON.stringify(data, null, 2), 'utf-8')
+      config.write(data)
     },
     verifyTag: function (event) {
       event.target.value = event.target.value.trim()

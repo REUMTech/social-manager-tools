@@ -35,14 +35,14 @@
 <script>
   import {MDCSnackbar} from '@material/snackbar'
   const remote = require('electron').remote
-  const likes = remote.getGlobal('likes')
+  const bot = remote.getGlobal('bot')
 
   export default {
     data () {
       return {items: []}
     },
     mounted () {
-      likes.subscribe((text) => {
+      this.$subscribeTo(bot.likes(), (text) => {
         this.items.push('Like: ' + text)
       })
     },
