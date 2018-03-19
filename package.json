@@ -59,9 +59,11 @@
     "instagrambotlib": "file:./instagram-bot-lib",
     "material-components-web": "^0.31.0",
     "material-design-icons-iconfont": "^3.0.3",
+    "rxjs": "^5.5.6",
     "vue": "^2.4.2",
     "vue-electron": "^1.0.6",
     "vue-router": "^2.5.3",
+    "vue-rx": "^5.0.0",
     "vuex": "^2.3.1"
   },
   "devDependencies": {

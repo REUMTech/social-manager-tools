@@ -17,7 +17,7 @@
     </nav>
 
     <div class="demo-content">
-      <router-view></router-view>
+      <router-view :snackbar="snackbar"></router-view>
     </div>
       
     <div id="snack" class="mdc-snackbar"
@@ -35,28 +35,20 @@
 <script>
   import {MDCSnackbar} from '@material/snackbar'
   const remote = require('electron').remote
-  const likes = remote.getGlobal('likes')
+  const bot = remote.getGlobal('bot')
 
   export default {
     data () {
-      return {items: []}
+      return {
+        items: [],
+        snackbar: ''
+      }
     },
     mounted () {
-      likes.subscribe((text) => {
-        this.items.push('Like: ' + text)
+      this.snackbar = MDCSnackbar.attachTo(this.$el.querySelector('.mdc-snackbar'))
+      this.$subscribeTo(bot.likes, (text) => {
+        console.log(text)
       })
-    },
-    methods: {
-      greet: function () {
-        const snackbar = MDCSnackbar.attachTo(this.$el.querySelector('.mdc-snackbar'))
-        snackbar.show({
-          message: 'messageInput.value',
-          actionText: 'Undo',
-          actionHandler: function () {
-            console.log('my cool function')
-          }
-        })
-      }
     }
   }
 </script>
