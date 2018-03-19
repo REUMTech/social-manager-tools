@@ -1,8 +1,8 @@
 {
-  "name": "instagram-bot-gui.js",
-  "version": "0.0.0",
+  "name": "instagrambotguijs",
+  "version": "0.1.0",
   "author": "",
-  "description": "An electron-vue project",
+  "description": "GUI for InstagramBot.js",
   "license": null,
   "main": "./dist/electron/main.js",
   "scripts": {
@@ -22,8 +22,8 @@
     "postinstall": "npm run lint:fix"
   },
   "build": {
-    "productName": "gui",
-    "appId": "org.simulatedgreg.electron-vue",
+    "productName": "InstagramBotGUI.js",
+    "appId": "io.ptkdev.instagrambotjs",
     "directories": {
       "output": "build"
     },
