@@ -2,7 +2,7 @@
 
 <p align="center"><h1 align="center">InstagramBotGUI.js</h1></p>
 
-<p align="center"><a href="#" alt="License"><img src="https://img.shields.io/badge/license-GLPv3-brightgreen.svg"></a>
+<p align="center"><a href="#" alt="License"><img src="https://img.shields.io/badge/license-AGLPv3-brightgreen.svg"></a>
 <a href="https://github.com/social-manager-tools/instagram-bot-lib" alt="powered by instagrambotlib v0.6.3"><img src="https://img.shields.io/badge/powered%20by-instagrambotlib%20 v0.6.3-895a4d.svg"></a>
 <a href="https://github.com/social-manager-tools/instagram-bot-gui.js/releases" alt="Version"><img src="https://img.shields.io/badge/version-v0.1.0%20BETA-lightgrey.svg"></a>
 <a href="https://slack.ptkdev.io" alt="Slack Chat"><img src="https://img.shields.io/badge/chat%20on-Slack-orange.svg"></a>
