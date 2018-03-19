@@ -14,7 +14,7 @@ function initBot (config) {
     // [TODO] likemode_superlike - select random hashtag from config list and like 3 random photo of same user | 400-600 like/day.
     // [TODO] fdfmode_classic - follow user from random hashtag and defollow after 1h | 300 follow-defollow/day.
     // [TODO] fdfmode_defollowall - defollow all your following (not defollow users in whitelist) | 90 defollow/hour.
-    'bot_mode': 'likemode_classic',
+    'bot_mode': config.mode,
     'bot_likeday_min': 400,
     'bot_likeday_max': 600, // in 2018 limit instagram is descreased to 400-600/day :(
     'bot_sleep_night': '7:00', // sleep from 00:00 to 7:00 am, work only in likemode_realistic
@@ -29,7 +29,7 @@ function initBot (config) {
     'instagram_userwhitelist': [''], // without @
 
     // Puppeteer configs
-    'chrome_headless': true,
+    'chrome_headless': !config.showChrome,
     'chrome_options': ['--disable-gpu', '--no-sandbox', '--window-size=1920x1080']
   }
 
@@ -37,7 +37,8 @@ function initBot (config) {
 }
 
 const config = new Config()
-config.saves.subscribe((savedConfig) => {
+config.changes.subscribe((savedConfig) => {
+  global.bot.stop_bot()
   global.bot = initBot(savedConfig)
 })
 
@@ -80,6 +81,7 @@ function createWindow () {
 app.on('ready', createWindow)
 
 app.on('window-all-closed', () => {
+  global.bot.stop_bot()
   if (process.platform !== 'darwin') {
     app.quit()
   }
