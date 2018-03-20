@@ -1,6 +1,6 @@
-<p align="center"><a href="https://instagrambotjs.ptkdev.io" alt="Screenshot"><img src="https://ptkdev.it/img/bot/instagram-bot-gui.js.png"></a></p>
+<p align="center"><a href="https://socialmanagertools.ptkdev.io" alt="Screenshot"><img src="https://ptkdev.it/img/bot/social-manager-tools.png"></a></p>
 
-<p align="center"><h1 align="center">InstagramBotGUI.js</h1></p>
+<p align="center"><h1 align="center">Social Manager Tools</h1></p>
 
 <p align="center"><a href="#" alt="License"><img src="https://img.shields.io/badge/license-AGLPv3-brightgreen.svg"></a>
 <a href="https://github.com/social-manager-tools/instagram-bot-lib" alt="powered by instagrambotlib v0.6.3"><img src="https://img.shields.io/badge/powered%20by-instagrambotlib%20 v0.6.3-895a4d.svg"></a>
@@ -9,22 +9,22 @@
 <a href="https://paypal.me/ptkdev" alt="Paypale Donate"><img src="https://img.shields.io/badge/donate-PayPal-red.svg"></a>
 <a href="mailto:support@ptkdev.io" alt="Support: support@ptkdev.io"><img src="https://img.shields.io/badge/help-support@ptkdev.io-fbbc05.svg"></a></p>
 
-<p align="center"><a href="https://instagrambotjs.ptkdev.io" alt="Screenshot"><img src="https://ptkdev.it/img/bot/ptkdev-instagram-bot.gif"></a></p>
-
 # What does he do
 This bot helps you increase the engagement of your Instagram profile through different social algorithms. Increase the likes on your photos and followers.
 
 # Features
 * [✓] Easy to use
 * [✓] [InstagramBot.js](https://github.com/social-manager-tools/instagram-bot.js) GUI for Windows and Mac OSX
+* [✓] [TwitterBot.js](https://github.com/social-manager-tools/twitter-bot.js) GUI for Windows and Mac OSX
+* [✓] [FacebookPageBot.js](https://github.com/social-manager-tools/facebookpage-bot.js) GUI for Windows and Mac OSX
 
 # Fast setup
-1. Download [windows version](https://instagrambotjs.ptkdev.io/release/v0.1.0/windows_x64.exe) or [mac version](https://instagrambotjs.ptkdev.io/release/stable/v0.1.0/macosx.exe)  and run it.
+1. Download [windows version](https://instagrambotjs.ptkdev.io/release/v0.1.0/windows_x64.zip) or [mac version](https://instagrambotjs.ptkdev.io/release/v0.1.0/macosx.zip)  and run it.
 2. If work add star :star: at this project :heart:
 3. If you want help me: <b><a href="https://paypal.me/ptkdev">little donation</a></b>.
 
 # Build setup
-1. Get repo: `git clone --recurse-submodules https://github.com/social-manager-tools/instagram-bot-gui.js.git`
+1. Get repo: `git clone --recurse-submodules https://github.com/social-manager-tools/social-manager-tools.js.git`
 2. Run: `npm run build` and `npm run dev`
 
 # TODO
